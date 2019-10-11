@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'home')}">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Type</title>
+</head>
+<body>
+
+<h2 th:text="Type Of Pets">Type Of Pets</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th style="width: 150px;">Name</th>
+    </tr>
+
+    <tr th:each="type : ${petType}">
+        <td th:text="name : ${type.name}">dog</td>
+    </tr>
+</table>
+
+</body>
+</html>
